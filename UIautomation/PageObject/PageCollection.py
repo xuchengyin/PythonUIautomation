@@ -4,8 +4,9 @@ from UIDriver.Broswers import Broswer
 
 
 class PageCollection(object):
+    def __init__(self,driver):
+        self.driver=driver
 
-    @staticmethod
     @property
-    def Baidu():
-        return Baidu(Broswer.WebDriver)
+    def Baidu(self):
+        return Baidu(self.driver)

@@ -1,6 +1,6 @@
 # -*-coding=utf-8-*-
-from ElementAction import TextField
-from ElementAction import clickable
+from ElementAction.Action import TextField
+from ElementAction.Action import Click
 from selenium.webdriver.common.by import By
 
 
@@ -16,4 +16,4 @@ class Baidu(object):
     @property
     def SearchButton(self):
         element=self.driver.find_element(By.ID, 'su')
-        return clickable(element)
+        return Click(element)

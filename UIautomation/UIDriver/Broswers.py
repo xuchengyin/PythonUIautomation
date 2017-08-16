@@ -13,9 +13,6 @@ class Broswer(object):
     def CreateDriver(broswer):
         Broswer.WebDriver = DriverEnvironment(broswer).CreateWebDriver()
 
-    # def CreateDriver(self):
-    #     self.driver = DriverEnvironment(self.broswer).CreateWebDriver()
-
     @staticmethod
     def Title():
         return Broswer.WebDriver.title
@@ -33,8 +30,9 @@ class Broswer(object):
         Broswer.WebDriver.quit()
 
     @staticmethod
-    def TakeScreenShort(path):
-        Broswer.WebDriver.save_screenshot(path)
+    def TakeScreenShort(name):
+        path=r'D:\UI\PythonUIautomation\TestResult\Tempfile'
+        Broswer.WebDriver.save_screenshot(path+name+'.png')
 
     @staticmethod
     def back():
