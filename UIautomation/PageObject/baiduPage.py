@@ -2,6 +2,7 @@
 from ElementAction.Action import TextField
 from ElementAction.Action import Click
 from selenium.webdriver.common.by import By
+import UIDriver.FindElement as FindElement
 
 
 class Baidu(object):
@@ -10,10 +11,10 @@ class Baidu(object):
 
     @property
     def SearchText(self):
-        element = self.driver.find_element(By.ID, 'kw')
-        return TextField(element)
+        element = FindElement.GetElement((By.ID, 'kw'))
+        return TextField(element) if element is not None else None
 
     @property
     def SearchButton(self):
-        element=self.driver.find_element(By.ID, 'su')
-        return Click(element)
+        element = FindElement.GetElement((By.ID, 'su'))
+        return Click(element) if element is not None else None
