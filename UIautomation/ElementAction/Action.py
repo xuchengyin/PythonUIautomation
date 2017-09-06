@@ -5,6 +5,8 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 from support.logging import Log
 import os
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.select import Select
 
 
 class Element(object):
@@ -36,6 +38,21 @@ class Element(object):
             return self.element.is_enabled()
         except Exception as e:
             Log.LogException(e.message)
+
+    def GetCssValue(self,value):
+        Log.LogAction('get css value')
+        return self.element.
+
+
+    def GetAttributeValue(self,value):
+
+
+    def GetDisplayText(self):
+
+    def MoveToElement(self):
+
+    def ScrollIntoView(self):
+
 
 
 class CheckBox(Element):

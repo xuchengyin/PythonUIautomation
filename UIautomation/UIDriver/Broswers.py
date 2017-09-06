@@ -45,4 +45,3 @@ class Broswer(object):
     @staticmethod
     def refresh():
         Broswer.WebDriver.refresh()
-        #self.WebDriver.find_element(By.ID,'jdjd').send_keys()
